@@ -3,7 +3,7 @@
 A fully animated Spider-Verse themed personal portfolio built using pure HTML, CSS, and JavaScript.
 
 ## 🚀 Live Demo
-(After enabling GitHub Pages, paste your link here)
+(After enabling GitHub Pages, paste link here)
 
 ---
 
@@ -46,10 +46,6 @@ Everything (HTML, CSS, JS) is inside a single file for simplicity.
 - Clean layout structuring
 
 ---
-
-## 📸 Preview
-
-(Add a screenshot later)
 
 ---
 
