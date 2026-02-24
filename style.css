@@ -366,6 +366,68 @@ footer {
 
 footer span { color: var(--neon-red); }
 
+/* ── Social Media Links ── */
+.socials {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* ── Spider-Verse Buttons ── */
+.socials a {
+    position: relative;
+    padding: 12px 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+
+    background: rgba(15, 15, 25, 0.6);
+    border: 1px solid rgba(255, 0, 60, 0.6);
+    border-radius: 40px;
+
+    backdrop-filter: blur(8px);
+    transition: all 0.35s ease;
+
+    box-shadow: 
+        0 0 8px rgba(255, 0, 60, 0.6),
+        0 0 18px rgba(0, 150, 255, 0.4);
+}
+
+/* ── Animated Neon Glow ── */
+.socials a::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 40px;
+    background: linear-gradient(
+        45deg,
+        #ff003c,
+        #0066ff,
+        #ff003c
+    );
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* ── Hover Effect ── */
+.socials a:hover {
+    transform: translateY(-4px) scale(1.05);
+    color: #fff;
+
+    box-shadow:
+        0 0 15px #ff003c,
+        0 0 30px #0066ff,
+        0 0 50px rgba(255, 0, 60, 0.6);
+}
+
+.socials a:hover::before {
+    opacity: 1;
+}
+
 /* ── Scroll Progress ── */
 #scroll-progress {
     position: fixed; top: 0; left: 0;
