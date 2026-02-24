@@ -35,7 +35,6 @@ https://uzaif-portfolio.netlify.app/
 
 ## 📂 Project Structure
 
-
 Everything (HTML, CSS, JS) is inside a single file for simplicity.
 
 ---
