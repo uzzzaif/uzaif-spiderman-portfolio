@@ -4,6 +4,10 @@ A fully animated Spider-Verse themed personal portfolio built using pure HTML, C
 
 ## 🚀 Live Demo
 
+## On Github Pages
+
+https://uzzzaif.github.io/uzaif-spiderman-portfolio/
+
 ## On Netlify
 
 https://uzaif-portfolio.netlify.app/
