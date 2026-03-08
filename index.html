@@ -4,7 +4,23 @@
     <meta charset="UTF-8">
     <title>Uzaif — Spider-Verse Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta -->
+    <meta name="description" content="Uzaif — AI & Machine Learning undergraduate, curious builder, problem solver, and web developer. Explore my journey, projects, and skills.">
+    <meta property="og:title" content="Uzaif — Spider-Verse Portfolio">
+    <meta property="og:description" content="Curious Builder · Problem Solver · AI & ML Developer. Explore the portfolio of Uzaif.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/uzzzaif">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕷️</text></svg>">
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,23 +44,30 @@
 <header>
     <div class="spider-symbol">🕷</div>
     <div class="hero-content">
-        <div class="hero-eyebrow">// AI & Machine Learning</div>
+        <div class="hero-eyebrow">// AI &amp; Machine Learning</div>
         <h1 class="hero-name glitch" data-text="UZAIF">UZAIF</h1>
-        <p class="hero-sub">Curious Builder &nbsp;·&nbsp; Problem Solver &nbsp;·&nbsp; Web Developer</p>
+        <p class="hero-sub"><span id="typewriter"></span><span class="cursor-blink">|</span></p>
     </div>
     <div class="scroll-hint">Scroll</div>
 </header>
 
 <!-- ── NAV ── -->
-<nav>
-    <a href="#intro">Intro</a>
-    <a href="#journey">Journey</a>
-    <a href="#story1">First Code</a>
-    <a href="#story2">Challenge</a>
-    <a href="#interests">Interests</a>
-    <a href="#projects">Projects</a>
-    <a href="#goals">Goals</a>
-    <a href="#fun">Fun Facts</a>
+<nav id="main-nav">
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+        <a href="#intro" data-section="intro">Intro</a>
+        <a href="#journey" data-section="journey">Journey</a>
+        <a href="#story1" data-section="story1">First Code</a>
+        <a href="#story2" data-section="story2">Challenge</a>
+        <a href="#interests" data-section="interests">Interests</a>
+        <a href="#skills" data-section="skills">Skills</a>
+        <a href="#projects" data-section="projects">Projects</a>
+        <a href="#goals" data-section="goals">Goals</a>
+        <a href="#fun" data-section="fun">Fun Facts</a>
+        <a href="#contact" data-section="contact">Contact</a>
+    </div>
 </nav>
 
 <!-- ── MAIN ── -->
@@ -73,7 +96,7 @@
         <div class="card-tag">First Power</div>
         <h2>First Coding Story</h2>
         <p>I still remember the first time I wrote a program. It was just a few lines of code,
-           but when it worked, it felt magical. I ran it again and again, modified them, made changes, just to see stupid outputs.
+           but when it worked, it felt magical. I ran it again and again, modified them, made changes, just to see the outputs.
            That small success made me realize that even complex systems start with simple steps.
            Since then, every bug I fix feels like solving a puzzle.</p>
     </section>
@@ -83,7 +106,7 @@
         <div class="card-tag">The Villain Arc</div>
         <h2>A Challenge I Faced</h2>
         <p>Not everything was easy. There were times when my code didn't work no matter how much I tried.
-           Didn't sleep that day, frustated, tired.
+           Didn't sleep that day, frustrated, tired.
            I once spent hours debugging a tiny mistake.
            That moment taught me patience, attention to detail, and resilience.
            I learned that frustration is part of growth, not a sign to quit.</p>
@@ -102,36 +125,165 @@
             This habit of analytical observation strengthens both my creative thinking and problem-solving mindset.</p>
     </section>
 
-    <section class="card" id="projects">
+    <!-- ── SKILLS SECTION ── -->
+    <section class="card" id="skills">
         <div class="card-number">06</div>
+        <div class="card-tag">Arsenal</div>
+        <h2>Skills</h2>
+        <div class="skill-categories">
+
+            <div class="skill-category">
+                <div class="skill-cat-label"><i class="fas fa-code"></i> Languages</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">JavaScript</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <div class="skill-cat-label"><i class="fas fa-brain"></i> AI / ML</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">Deep Learning</span>
+                    <span class="skill-tag">Computer Vision</span>
+                    <span class="skill-tag">YOLOv8</span>
+                    <span class="skill-tag">Model Evaluation</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <div class="skill-cat-label"><i class="fas fa-wrench"></i> Libraries &amp; Tools</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">OpenCV</span>
+                    <span class="skill-tag">NumPy</span>
+                    <span class="skill-tag">Pandas</span>
+                    <span class="skill-tag">Jupyter Notebook</span>
+                    <span class="skill-tag">Google Colab</span>
+                    <span class="skill-tag">VS Code</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <div class="skill-cat-label"><i class="fas fa-database"></i> Databases</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">SQLite</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <div class="skill-cat-label"><i class="fas fa-globe"></i> Web Technologies</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <div class="skill-cat-label"><i class="fas fa-cloud"></i> Cloud</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">AWS EC2</span>
+                    <span class="skill-tag">AWS S3</span>
+                    <span class="skill-tag">IAM</span>
+                    <span class="skill-tag">VPC</span>
+                    <span class="skill-tag">Lambda</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <div class="skill-cat-label"><i class="fas fa-lightbulb"></i> Core Concepts</div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Data Structures</span>
+                    <span class="skill-tag">Algorithms</span>
+                    <span class="skill-tag">OOP</span>
+                    <span class="skill-tag">DBMS</span>
+                    <span class="skill-tag">Operating Systems</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="card" id="projects">
+        <div class="card-number">07</div>
         <div class="card-tag">Experiments</div>
         <h2>Projects</h2>
-        <p>This section highlights my practical experiments and project implementations where I translate theoretical concepts into real-world solutions.
-            One of my key projects, <a class="links" target="_blank" href="https://github.com/uzzzaif/RuleCop-University-Violation-Detector"><strong>Rule-Cop</strong></a>, focuses on building an intelligent system designed to monitor, analyze, and enforce predefined rules using automation and logical decision-making.
-            Through this project, I explored core AI and software engineering principles, including structured problem-solving, system design, and scalable implementation.
-            My projects reflect my commitment to creating meaningful, impact-driven solutions while continuously strengthening my technical depth in Artificial Intelligence and Machine Learning.
-        </p>
+        <p style="margin-bottom: 28px;">Practical experiments where I translate theoretical concepts into real-world solutions, combining AI principles with solid software engineering.</p>
+        <div class="projects-grid">
+
+            <a class="project-card" href="https://github.com/uzzzaif/RuleCop-University-Violation-Detector" target="_blank" rel="noopener noreferrer">
+                <div class="project-header">
+                    <div class="project-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="project-links">
+                        <i class="fab fa-github"></i>
+                    </div>
+                </div>
+                <h3 class="project-title">Rule-Cop</h3>
+                <p class="project-desc">An intelligent system designed to monitor, analyze, and enforce predefined university rules using automation and logical decision-making.</p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">YOLOv8</span>
+                    <span class="tag">OpenCV</span>
+                    <span class="tag">MySQL</span>
+                </div>
+            </a>
+
+            <a class="project-card" href="https://github.com/uzzzaif/uzaif-spiderman-portfolio" target="_blank" rel="noopener noreferrer">
+                <div class="project-header">
+                    <div class="project-icon"><i class="fas fa-globe"></i></div>
+                    <div class="project-links">
+                        <i class="fab fa-github"></i>
+                    </div>
+                </div>
+                <h3 class="project-title">Spider-Portfolio</h3>
+                <p class="project-desc">This very portfolio — a Spider-Verse themed personal site with canvas animations, custom cursor, and cinematic scroll effects.</p>
+                <div class="project-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Canvas</span>
+                </div>
+            </a>
+
+        </div>
     </section>
-    
+
     <section class="card" id="goals">
-        <div class="card-number">07</div>
+        <div class="card-number">08</div>
         <div class="card-tag">The Mission</div>
         <h2>Future Goals</h2>
-        <p>My goal is to continuously strengthen my expertise in Artificial Intelligence and Machine Learning while building scalable, real-world solutions that solve meaningful problems
-            As an AI & ML undergraduate, I aim to apply strong foundations in Data Structures, Algorithms, and Software Development to design intelligent systems that create measurable impact.
+        <p>My goal is to continuously strengthen my expertise in Artificial Intelligence and Machine Learning while building scalable, real-world solutions that solve meaningful problems.
+            As an AI &amp; ML undergraduate, I aim to apply strong foundations in Data Structures, Algorithms, and Software Development to design intelligent systems that create measurable impact.
             I seek to work on technically challenging projects that enhance my problem-solving ability, push my analytical thinking, and contribute to long-term innovation.
             I am committed to continuous learning, adaptability, and staying aligned with emerging technologies in a rapidly evolving digital landscape.</p>
     </section>
 
     <section class="card" id="fun">
-        <div class="card-number">08</div>
+        <div class="card-number">09</div>
         <div class="card-tag">Spider-Stats</div>
         <h2>Fun Facts</h2>
         <div class="facts-grid">
-            <div class="fact-item">I enjoy solving logical puzzles, Rubix cubes, chess</div>
-            <div class="fact-item">I debug problems in my head before sleeping, things I could've done right today.</div>
+            <div class="fact-item">I enjoy solving logical puzzles, Rubik's cubes, and chess.</div>
+            <div class="fact-item">I debug problems in my head before sleeping — things I could've done right today.</div>
             <div class="fact-item">Small improvements every day lead to big success.</div>
             <div class="fact-item">I learn by building, not just reading.</div>
+        </div>
+    </section>
+
+    <!-- ── CONTACT SECTION ── -->
+    <section class="card" id="contact">
+        <div class="card-number">10</div>
+        <div class="card-tag">Signal</div>
+        <h2>Get In Touch</h2>
+        <p>Have a project, opportunity, or just want to connect? My inbox is always open. I'll get back to you as soon as possible.</p>
+        <div class="contact-ctas">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mirzauzaif07@gmail.com" target="_blank" rel="noopener noreferrer" class="cta-btn primary">
+                <i class="fas fa-envelope"></i> Send a Message
+            </a>
+            <a href="https://www.linkedin.com/in/mirza-uzaif-baig-a78556289/" target="_blank" rel="noopener noreferrer" class="cta-btn secondary">
+                <i class="fab fa-linkedin"></i> Connect on LinkedIn
+            </a>
         </div>
     </section>
 
@@ -140,25 +292,21 @@
 <!-- ── FOOTER ── -->
 <footer>
     <p>© 2026 &nbsp;<span>UZAIF</span>&nbsp; — Designed with curiosity &amp; red webs.</p>
-    
-<!-- ── Socials ── -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <div class="socials">
-        <a href="https://github.com/uzzzaif" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/uzzzaif" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <i class="fab fa-github"></i>
         </a>
-        <a href="https://www.linkedin.com/in/mirza-uzaif-baig-a78556289/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/mirza-uzaif-baig-a78556289/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://www.instagram.com/uzzzaif/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/uzzzaif/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <i class="fab fa-instagram"></i>
         </a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mirzauzaif07@gmail.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mirzauzaif07@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
             <i class="fas fa-envelope"></i>
         </a>
     </div>
-
 </footer>
 
 <script src="script.js"></script>
